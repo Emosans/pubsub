@@ -45,6 +45,13 @@ export class Con {
         this.publisher.publish(topic, content, this.clients);
         console.log(`Published to topic ${topic}:`, content);
         break;
+      case "view":
+        this.subscriber.messageView(
+          message,
+          clientId,
+          this.publisher.topics
+        );
+        break;
       default:
         console.log("Unknown action:", action);
     }

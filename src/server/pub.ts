@@ -1,7 +1,7 @@
 import { Client } from "../models/client";
 
 export class Pub {
-  private topics: Map<string, Set<string>> = new Map();
+  public topics: Map<string, Set<string>> = new Map();
 
   // chcek if ther exists a topic in topics
   // if no just createone and assign a map of set to it
